@@ -1,0 +1,618 @@
+[
+  {
+    "card_name": "Ace of Cups",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ACups01.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Cups01.jpg",
+    "saved_path": "assets/tarot-source-images/raw/ace-of-cups.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Ace of Pentacles",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3APents01.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Pents01.jpg",
+    "saved_path": "assets/tarot-source-images/raw/ace-of-pentacles.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Ace of Swords",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ASwords01.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Swords01.jpg",
+    "saved_path": "assets/tarot-source-images/raw/ace-of-swords.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Ace of Wands",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3AWands01.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/11/Wands01.jpg",
+    "saved_path": "assets/tarot-source-images/raw/ace-of-wands.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Death",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ARWS_Tarot_13_Death.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/RWS_Tarot_13_Death.jpg",
+    "saved_path": "assets/tarot-source-images/raw/death.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Eight of Cups",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ACups08.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/60/Cups08.jpg",
+    "saved_path": "assets/tarot-source-images/raw/eight-of-cups.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Eight of Pentacles",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3APents08.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/49/Pents08.jpg",
+    "saved_path": "assets/tarot-source-images/raw/eight-of-pentacles.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Eight of Swords",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ASwords08.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Swords08.jpg",
+    "saved_path": "assets/tarot-source-images/raw/eight-of-swords.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Eight of Wands",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3AWands08.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Wands08.jpg",
+    "saved_path": "assets/tarot-source-images/raw/eight-of-wands.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Five of Cups",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ACups05.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Cups05.jpg",
+    "saved_path": "assets/tarot-source-images/raw/five-of-cups.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Five of Pentacles",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3APents05.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/96/Pents05.jpg",
+    "saved_path": "assets/tarot-source-images/raw/five-of-pentacles.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Five of Swords",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ASwords05.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Swords05.jpg",
+    "saved_path": "assets/tarot-source-images/raw/five-of-swords.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Five of Wands",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3AWands05.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Wands05.jpg",
+    "saved_path": "assets/tarot-source-images/raw/five-of-wands.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Four of Cups",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ACups04.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Cups04.jpg",
+    "saved_path": "assets/tarot-source-images/raw/four-of-cups.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Four of Pentacles",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3APents04.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/35/Pents04.jpg",
+    "saved_path": "assets/tarot-source-images/raw/four-of-pentacles.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Four of Swords",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ASwords04.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Swords04.jpg",
+    "saved_path": "assets/tarot-source-images/raw/four-of-swords.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Four of Wands",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3AWands04.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Wands04.jpg",
+    "saved_path": "assets/tarot-source-images/raw/four-of-wands.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Judgement",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ARWS_Tarot_20_Judgement.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/RWS_Tarot_20_Judgement.jpg",
+    "saved_path": "assets/tarot-source-images/raw/judgement.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Justice",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ARWS_Tarot_11_Justice.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/RWS_Tarot_11_Justice.jpg",
+    "saved_path": "assets/tarot-source-images/raw/justice.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "King of Cups",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ACups14.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Cups14.jpg",
+    "saved_path": "assets/tarot-source-images/raw/king-of-cups.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "King of Pentacles",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3APents14.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Pents14.jpg",
+    "saved_path": "assets/tarot-source-images/raw/king-of-pentacles.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "King of Swords",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ASwords14.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/33/Swords14.jpg",
+    "saved_path": "assets/tarot-source-images/raw/king-of-swords.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "King of Wands",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3AWands14.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Wands14.jpg",
+    "saved_path": "assets/tarot-source-images/raw/king-of-wands.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Knight of Cups",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ACups12.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Cups12.jpg",
+    "saved_path": "assets/tarot-source-images/raw/knight-of-cups.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Knight of Pentacles",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3APents12.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Pents12.jpg",
+    "saved_path": "assets/tarot-source-images/raw/knight-of-pentacles.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Knight of Swords",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ASwords12.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Swords12.jpg",
+    "saved_path": "assets/tarot-source-images/raw/knight-of-swords.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Knight of Wands",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3AWands12.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Wands12.jpg",
+    "saved_path": "assets/tarot-source-images/raw/knight-of-wands.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Nine of Cups",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ACups09.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/24/Cups09.jpg",
+    "saved_path": "assets/tarot-source-images/raw/nine-of-cups.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Nine of Pentacles",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3APents09.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Pents09.jpg",
+    "saved_path": "assets/tarot-source-images/raw/nine-of-pentacles.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Nine of Swords",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ASwords09.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Swords09.jpg",
+    "saved_path": "assets/tarot-source-images/raw/nine-of-swords.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Page of Cups",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ACups11.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Cups11.jpg",
+    "saved_path": "assets/tarot-source-images/raw/page-of-cups.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Page of Pentacles",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3APents11.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Pents11.jpg",
+    "saved_path": "assets/tarot-source-images/raw/page-of-pentacles.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Page of Swords",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ASwords11.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Swords11.jpg",
+    "saved_path": "assets/tarot-source-images/raw/page-of-swords.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Page of Wands",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3AWands11.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Wands11.jpg",
+    "saved_path": "assets/tarot-source-images/raw/page-of-wands.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Queen of Cups",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ACups13.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Cups13.jpg",
+    "saved_path": "assets/tarot-source-images/raw/queen-of-cups.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Queen of Pentacles",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3APents13.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/88/Pents13.jpg",
+    "saved_path": "assets/tarot-source-images/raw/queen-of-pentacles.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Queen of Swords",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ASwords13.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Swords13.jpg",
+    "saved_path": "assets/tarot-source-images/raw/queen-of-swords.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Queen of Wands",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3AWands13.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Wands13.jpg",
+    "saved_path": "assets/tarot-source-images/raw/queen-of-wands.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Seven of Cups",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ACups07.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Cups07.jpg",
+    "saved_path": "assets/tarot-source-images/raw/seven-of-cups.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Seven of Pentacles",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3APents07.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Pents07.jpg",
+    "saved_path": "assets/tarot-source-images/raw/seven-of-pentacles.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Seven of Swords",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ASwords07.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/34/Swords07.jpg",
+    "saved_path": "assets/tarot-source-images/raw/seven-of-swords.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Seven of Wands",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3AWands07.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Wands07.jpg",
+    "saved_path": "assets/tarot-source-images/raw/seven-of-wands.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Six of Cups",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ACups06.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/1/17/Cups06.jpg",
+    "saved_path": "assets/tarot-source-images/raw/six-of-cups.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Six of Pentacles",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3APents06.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Pents06.jpg",
+    "saved_path": "assets/tarot-source-images/raw/six-of-pentacles.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Six of Swords",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ASwords06.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Swords06.jpg",
+    "saved_path": "assets/tarot-source-images/raw/six-of-swords.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Six of Wands",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3AWands06.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Wands06.jpg",
+    "saved_path": "assets/tarot-source-images/raw/six-of-wands.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Strength",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ARWS_Tarot_08_Strength.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/RWS_Tarot_08_Strength.jpg",
+    "saved_path": "assets/tarot-source-images/raw/strength.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Temperance",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ARWS_Tarot_14_Temperance.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/RWS_Tarot_14_Temperance.jpg",
+    "saved_path": "assets/tarot-source-images/raw/temperance.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Ten of Cups",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ACups10.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/84/Cups10.jpg",
+    "saved_path": "assets/tarot-source-images/raw/ten-of-cups.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Ten of Pentacles",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3APents10.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/42/Pents10.jpg",
+    "saved_path": "assets/tarot-source-images/raw/ten-of-pentacles.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Ten of Swords",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ASwords10.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Swords10.jpg",
+    "saved_path": "assets/tarot-source-images/raw/ten-of-swords.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Ten of Wands",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3AWands10.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Wands10.jpg",
+    "saved_path": "assets/tarot-source-images/raw/ten-of-wands.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "The Chariot",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ARWS_Tarot_07_Chariot.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/RWS_Tarot_07_Chariot.jpg",
+    "saved_path": "assets/tarot-source-images/raw/the-chariot.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "The Devil",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ARWS_Tarot_15_Devil.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/55/RWS_Tarot_15_Devil.jpg",
+    "saved_path": "assets/tarot-source-images/raw/the-devil.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "The Emperor",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ARWS_Tarot_04_Emperor.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/c/c3/RWS_Tarot_04_Emperor.jpg",
+    "saved_path": "assets/tarot-source-images/raw/the-emperor.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "The Empress",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ARWS_Tarot_03_Empress.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/d2/RWS_Tarot_03_Empress.jpg",
+    "saved_path": "assets/tarot-source-images/raw/the-empress.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "The Fool",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_00_Fool.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/RWS_Tarot_00_Fool.jpg/960px-RWS_Tarot_00_Fool.jpg",
+    "saved_path": "assets/tarot-source-images/raw/the-fool.jpg",
+    "notes": "Rider-Waite-Smith Wikimedia file page; appeared original/public-domain-looking and had no visible watermark in source file preview."
+  },
+  {
+    "card_name": "The Hanged Man",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ARWS_Tarot_12_Hanged_Man.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/RWS_Tarot_12_Hanged_Man.jpg",
+    "saved_path": "assets/tarot-source-images/raw/the-hanged-man.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "The Hermit",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ARWS_Tarot_09_Hermit.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/RWS_Tarot_09_Hermit.jpg",
+    "saved_path": "assets/tarot-source-images/raw/the-hermit.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "The Hierophant",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ARWS_Tarot_05_Hierophant.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/RWS_Tarot_05_Hierophant.jpg",
+    "saved_path": "assets/tarot-source-images/raw/the-hierophant.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "The High Priestess",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ARWS_Tarot_02_High_Priestess.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/8/88/RWS_Tarot_02_High_Priestess.jpg",
+    "saved_path": "assets/tarot-source-images/raw/the-high-priestess.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "The Lovers",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_06_Lovers.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/RWS_Tarot_06_Lovers.jpg/960px-RWS_Tarot_06_Lovers.jpg",
+    "saved_path": "assets/tarot-source-images/raw/the-lovers.jpg",
+    "notes": "Rider-Waite-Smith Wikimedia file page; appeared original/public-domain-looking and had no visible watermark in source file preview."
+  },
+  {
+    "card_name": "The Magician",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ARWS_Tarot_01_Magician.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/de/RWS_Tarot_01_Magician.jpg",
+    "saved_path": "assets/tarot-source-images/raw/the-magician.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "The Moon",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_18_Moon.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/RWS_Tarot_18_Moon.jpg/960px-RWS_Tarot_18_Moon.jpg",
+    "saved_path": "assets/tarot-source-images/raw/the-moon.jpg",
+    "notes": "Rider-Waite-Smith Wikimedia file page; appeared original/public-domain-looking and had no visible watermark in source file preview."
+  },
+  {
+    "card_name": "The Star",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ARWS_Tarot_17_Star.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/RWS_Tarot_17_Star.jpg",
+    "saved_path": "assets/tarot-source-images/raw/the-star.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "The Sun",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File:RWS_Tarot_19_Sun.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/RWS_Tarot_19_Sun.jpg/960px-RWS_Tarot_19_Sun.jpg",
+    "saved_path": "assets/tarot-source-images/raw/the-sun.jpg",
+    "notes": "Rider-Waite-Smith Wikimedia file page; appeared original/public-domain-looking and had no visible watermark in source file preview."
+  },
+  {
+    "card_name": "The Tower",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ARWS_Tarot_16_Tower.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/5/53/RWS_Tarot_16_Tower.jpg",
+    "saved_path": "assets/tarot-source-images/raw/the-tower.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "The World",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ARWS_Tarot_21_World.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/RWS_Tarot_21_World.jpg",
+    "saved_path": "assets/tarot-source-images/raw/the-world.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Three of Cups",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ACups03.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Cups03.jpg",
+    "saved_path": "assets/tarot-source-images/raw/three-of-cups.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Three of Pentacles",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3APents03.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/4/42/Pents03.jpg",
+    "saved_path": "assets/tarot-source-images/raw/three-of-pentacles.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Three of Swords",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ASwords03.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Swords03.jpg",
+    "saved_path": "assets/tarot-source-images/raw/three-of-swords.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Three of Wands",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3AWands03.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Wands03.jpg",
+    "saved_path": "assets/tarot-source-images/raw/three-of-wands.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Two of Cups",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ACups02.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/f/f8/Cups02.jpg",
+    "saved_path": "assets/tarot-source-images/raw/two-of-cups.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Two of Pentacles",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3APents02.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Pents02.jpg",
+    "saved_path": "assets/tarot-source-images/raw/two-of-pentacles.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Two of Swords",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ASwords02.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Swords02.jpg",
+    "saved_path": "assets/tarot-source-images/raw/two-of-swords.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Two of Wands",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3AWands02.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Wands02.jpg",
+    "saved_path": "assets/tarot-source-images/raw/two-of-wands.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  },
+  {
+    "card_name": "Wheel of Fortune",
+    "source": "Wikimedia Commons",
+    "source_page_url": "https://commons.wikimedia.org/wiki/File%3ARWS_Tarot_10_Wheel_of_Fortune.jpg",
+    "file_url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/RWS_Tarot_10_Wheel_of_Fortune.jpg",
+    "saved_path": "assets/tarot-source-images/raw/wheel-of-fortune.jpg",
+    "notes": "Wikimedia Commons RWS-compatible source file with traceable file page; no visible watermark expected from source file."
+  }
+]

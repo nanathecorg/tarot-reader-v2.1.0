@@ -1,0 +1,10 @@
+{
+  "name": "tarot-psychic-reader-local-web",
+  "version": "2.0.0",
+  "private": true,
+  "description": "OpenAI-backed local web Tarot Reader",
+  "scripts": {
+    "start": "python3 server.py",
+    "serve": "python3 server.py"
+  }
+}
