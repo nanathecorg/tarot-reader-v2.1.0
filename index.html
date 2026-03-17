@@ -47,7 +47,7 @@
     <div class="hero-cards">
       <img src="./card-images/the-moon.jpg" alt="The Moon"><img src="./card-images/the-star.jpg" alt="The Star"><img src="./card-images/the-sun.jpg" alt="The Sun">
     </div>
-    <div class="actions"><button class="primary" id="startBtn">Begin the session</button><span class="version">public test</span></div>
+    <div class="actions"><button class="primary" id="startBtn" onclick="showPage(1)">Begin the session</button><span class="version">public test</span></div>
   </section>
 
   <section class="panel hidden" id="page1">
@@ -59,7 +59,7 @@
       <div><label for="relationshipStatus">Relationship status (optional)</label><select id="relationshipStatus"><option value="">Choose one</option><option>Single</option><option>Dating</option><option>In a relationship</option><option>Complicated</option><option>Prefer not to say</option></select></div>
       <div><label for="focusTheme">Current life pressure (optional)</label><select id="focusTheme"><option value="">Choose one</option><option>Love</option><option>Career</option><option>Decision</option><option>Healing</option><option>General uncertainty</option></select></div>
     </div>
-    <div class="actions"><button class="secondary" data-back="0">Back</button><button class="primary" id="toCustomizeBtn">Continue</button></div>
+    <div class="actions"><button class="secondary" data-back="0">Back</button><button class="primary" id="toCustomizeBtn" onclick="showPage(2)">Continue</button></div>
   </section>
 
   <section class="panel hidden" id="page2">
@@ -70,7 +70,7 @@
       <div><label for="focus">Focus</label><select id="focus"><option value="general">General guidance</option><option value="love">Love / relationships</option><option value="career">Career / work / money</option><option value="emotional">Healing / inner life</option><option value="decision">Decision / crossroads</option></select></div>
     </div>
     <div class="box small warning" id="limitBox"></div>
-    <div class="actions"><button class="secondary" data-back="1">Back</button><button class="primary" id="toQuestionBtn">Continue</button></div>
+    <div class="actions"><button class="secondary" data-back="1">Back</button><button class="primary" id="toQuestionBtn" onclick="showPage(3)">Continue</button></div>
   </section>
 
   <section class="panel hidden" id="page3">
@@ -100,7 +100,7 @@
     <div class="reading-box" id="readingText"></div>
     <div class="grid two" id="readingChunks" style="margin-top:16px;"></div>
     <details style="margin-top:16px;"><summary>Internal session brief</summary><div class="brief-box" id="briefText"></div></details>
-    <div class="actions"><button class="secondary" data-back="4">Back</button><button class="primary" id="newReadingBtn">Start a new session</button></div>
+    <div class="actions"><button class="secondary" data-back="4">Back</button><button class="primary" id="newReadingBtn" onclick="showPage(3)">Start a new session</button></div>
   </section>
 </div>
 <script>
@@ -118,6 +118,7 @@ function normalizeQuestion(q){ return q.toLowerCase().replace(/[^a-z0-9\s]/g,' '
 function similarity(a,b){ const A=new Set(normalizeQuestion(a).split(' ').filter(w=>w.length>2)); const B=new Set(normalizeQuestion(b).split(' ').filter(w=>w.length>2)); if(!A.size||!B.size) return 0; const inter=[...A].filter(x=>B.has(x)).length; const union=new Set([...A,...B]).size; return inter/union; }
 function repeatedQuestion(q){ return weekLog().some(x=>similarity(q,x.question)>=0.55); }
 function showPage(i){ state.page=i; for(let k=0;k<6;k++){ document.getElementById('page'+k).classList.toggle('hidden',k!==i); document.getElementById('dot'+k).classList.toggle('active',k===i);} updateLimitBox(); }
+window.showPage = showPage;
 function updateLimitBox(){ const used=weekLog().length; const left=Math.max(0,MAX_WEEKLY-used); const el=document.getElementById('limitBox'); if(el) el.textContent=`This temporary account currently has ${left} of ${MAX_WEEKLY} reading(s) left this week.`; }
 function renderCards(cards){ const root=document.getElementById('cards'); root.innerHTML=''; cards.forEach(card=>{ const image=imageMap[card.name]?`<img src="${imageMap[card.name]}" alt="${card.name}" class="${card.orientation==='reversed'?'reversed':''}">`:`<div class="placeholder">No local card art yet for<br>${card.name}</div>`; const el=document.createElement('article'); el.className='card'; el.innerHTML=`<div class="card-pos">${card.position}</div><div class="card-media">${image}</div><div class="card-name">${card.name}</div><div class="meta">${card.orientation}</div><div class="small" style="margin-top:10px;">${card.meanings[card.orientation]}</div>`; root.appendChild(el); }); }
 function renderReadingChunks(text){ const root=document.getElementById('readingChunks'); if(!root) return; root.innerHTML=''; const parts=text.split(/
