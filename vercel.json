@@ -1,0 +1,13 @@
+{
+  "functions": {
+    "api/*.py": {
+      "runtime": "python3.11"
+    }
+  },
+  "routes": [
+    { "src": "/api/health", "dest": "/api/health.py" },
+    { "src": "/api/reading", "dest": "/api/reading.py" },
+    { "handle": "filesystem" },
+    { "src": "/", "dest": "/index.html" }
+  ]
+}

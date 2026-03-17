@@ -16,9 +16,7 @@ Public code export for the Tarot Reader shipping product.
 ## Run locally
 
 ```bash
-cd app/local-web
-export OPENAI_API_KEY=your_key_here
-npm start
+python local usage was the original export; this repo is now Vercel-oriented
 ```
 
 Then open:
