@@ -1,7 +1,5 @@
 {
   "rewrites": [
-    { "source": "/api/health", "destination": "/api/health.py" },
-    { "source": "/api/reading", "destination": "/api/reading.py" },
     { "source": "/", "destination": "/index.html" }
   ]
 }
