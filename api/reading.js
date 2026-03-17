@@ -5,7 +5,7 @@ const STYLE_PROMPTS = {
 
 const CALL1_SYSTEM = `You are the internal analysis layer for Tarot Reader.\n\nYou are not giving the final tarot reading yet.\nYour job is to analyze the user and the question the way a skilled tarot reader would think privately before speaking.\n\nIdentify:\n- what the user explicitly asked\n- what they are probably really asking underneath that\n- emotional state and pressure\n- hidden desire\n- hidden fear\n- what kind of answer they can best absorb right now\n- what tone the final reader should take\n- what the final reading must focus on\n- what the final reading must avoid\n\nRules:\n- Be perceptive, but do not invent unsupported facts.\n- Do not become creepy, overly intimate, or falsely familiar.\n- Do not flatter the user.\n- Do not use fake therapist language.\n- Do not give the final reading yet.\n- Prefer situational clarity over vague personality speculation.\n- If the question is about another person, analyze the user's need and the relational dynamic without pretending certainty about the other person's private mind.\n\nReturn valid JSON with keys:\nexplicit_question, likely_real_question, emotional_state, hidden_desire, hidden_fear, answer_style, directness_level, reading_focus, avoid, notes`;
 
-const CALL2_SYSTEM = `You are Tarot Reader, a polished tarot-reading product for regular people.\n\nYou are giving the final reading.\nYou receive:\n- the user's question\n- a structured internal analysis brief\n- tarot cards with positions and orientations\n- a selected reader style\n\nRules:\n- Answer the actual question.\n- Use the cards as symbolic constraints and narrative anchors.\n- The person matters more than empty symbolism.\n- Do not become abstract when the question is concrete.\n- Do not sound over-friendly, clingy, creepy, or falsely intimate.\n- Do not flatter the user.\n- Do not use scammy urgency or manipulative fear.\n- Do not pretend certainty you do not have.\n- If the question is relational, speak in relational language.\n- If the user is implicitly asking what to do, provide clear guidance.\n- The reading should feel like a tarot reading, not generic life coaching.\n\nOutput shape:\n1. Direct answer\n2. Card-by-card reading in context\n3. Spread synthesis\n4. What to do next\n5. Closing line`;
+const CALL2_SYSTEM = `You are Tarot Reader, a polished tarot-reading product for regular people.\n\nYou are giving the final reading.\nYou receive:\n- the user's question\n- a structured internal analysis brief\n- a seriousness and repetition check\n- a situational diagnosis\n- tarot cards with positions and orientations\n- a selected reader style\n\nRules:\n- Answer the actual question.\n- Use the cards as symbolic constraints and narrative anchors.\n- The person matters more than empty symbolism.\n- Do not become abstract when the question is concrete.\n- Do not sound over-friendly, clingy, creepy, or falsely intimate.\n- Do not flatter the user.\n- Do not use scammy urgency or manipulative fear.\n- Do not pretend certainty you do not have.\n- If the question is relational, speak in relational language.\n- If the user is implicitly asking what to do, provide clear guidance.\n- The reading should feel like a tarot reading, not generic life coaching.\n- The reader has authority and should not sound eager to please.\n\nOutput shape:\n1. Direct answer\n2. Card-by-card reading in context\n3. Spread synthesis\n4. What to do next\n5. Closing line`;
 
 const DECK = [
 ['The Fool','A leap, openness, and the willingness to step into something not fully mapped.','Hesitation, reckless escape, or fear disguised as freedom.'],
@@ -165,31 +165,48 @@ export default async function handler(req, res) {
     const briefRaw = await openaiChat([
       { role: 'system', content: CALL1_SYSTEM },
       { role: 'user', content: JSON.stringify(call1Payload, null, 2) }
-    ], { temperature: 0.5, response_format: { type: 'json_object' } });
+    ], { temperature: 0.45, response_format: { type: 'json_object' } });
     const brief = JSON.parse(briefRaw);
+
+    const checkSystem = `You are the gatekeeping layer for Tarot Reader. Judge whether the question is serious, vague, repeated in substance, manipulative, or unserious. Return valid JSON with keys: seriousness, question_quality, should_refuse, should_redirect, repetition_risk, guidance_to_reader, refinement_note.`;
+    const checkRaw = await openaiChat([
+      { role: 'system', content: checkSystem },
+      { role: 'user', content: JSON.stringify({ question: payload.question, focus: payload.focus, desired_answer: payload.desiredAnswer || '', feared_truth: payload.fearedTruth || '', prior_brief: brief }, null, 2) }
+    ], { temperature: 0.2, response_format: { type: 'json_object' } });
+    const questionCheck = JSON.parse(checkRaw);
+
+    const diagnosisSystem = `You are the situational diagnosis layer for Tarot Reader. Infer the emotional and situational core of the user problem without giving the final reading yet. Return valid JSON with keys: core_tension, relational_dynamic, internal_conflict, likely_block, what_the_reader_should_press_on.`;
+    const diagnosisRaw = await openaiChat([
+      { role: 'system', content: diagnosisSystem },
+      { role: 'user', content: JSON.stringify({ question: payload.question, user_profile: call1Payload.user_profile, analysis_brief: brief, question_check: questionCheck }, null, 2) }
+    ], { temperature: 0.35, response_format: { type: 'json_object' } });
+    const diagnosis = JSON.parse(diagnosisRaw);
 
     const call2Payload = {
       question: payload.question,
       reader_style: payload.readerStyle || 'relationship_expert',
       analysis_brief: brief,
+      question_check: questionCheck,
+      situational_diagnosis: diagnosis,
       spread: { key: spreadKey, name: SPREADS[spreadKey]?.name || SPREADS.three.name },
       cards,
       output_requirements: {
         concrete_and_graspable: true,
         avoid_empty_abstraction: true,
         anti_creepy: true,
-        give_action_guidance_when_useful: true
+        give_action_guidance_when_useful: true,
+        reader_authority: true
       }
     };
 
     const reading = await openaiChat([
       { role: 'system', content: `${CALL2_SYSTEM}\n\n${STYLE_PROMPTS[payload.readerStyle || 'relationship_expert']}` },
       { role: 'user', content: JSON.stringify(call2Payload, null, 2) }
-    ], { temperature: 0.9 });
+    ], { temperature: 0.82 });
 
     return res.status(200).json({
       ok: true,
-      brief,
+      brief: { ...brief, question_check: questionCheck, situational_diagnosis: diagnosis },
       reading,
       cards,
       spread_name: SPREADS[spreadKey]?.name || SPREADS.three.name,
