@@ -98,6 +98,7 @@
     <div class="meta" id="readingMeta"></div>
     <div class="cards" id="cards"></div>
     <div class="reading-box" id="readingText"></div>
+    <div class="grid two" id="readingChunks" style="margin-top:16px;"></div>
     <details style="margin-top:16px;"><summary>Internal session brief</summary><div class="brief-box" id="briefText"></div></details>
     <div class="actions"><button class="secondary" data-back="4">Back</button><button class="primary" id="newReadingBtn">Start a new session</button></div>
   </section>
@@ -119,6 +120,9 @@ function repeatedQuestion(q){ return weekLog().some(x=>similarity(q,x.question)>
 function showPage(i){ state.page=i; for(let k=0;k<6;k++){ document.getElementById('page'+k).classList.toggle('hidden',k!==i); document.getElementById('dot'+k).classList.toggle('active',k===i);} updateLimitBox(); }
 function updateLimitBox(){ const used=weekLog().length; const left=Math.max(0,MAX_WEEKLY-used); const el=document.getElementById('limitBox'); if(el) el.textContent=`This temporary account currently has ${left} of ${MAX_WEEKLY} reading(s) left this week.`; }
 function renderCards(cards){ const root=document.getElementById('cards'); root.innerHTML=''; cards.forEach(card=>{ const image=imageMap[card.name]?`<img src="${imageMap[card.name]}" alt="${card.name}" class="${card.orientation==='reversed'?'reversed':''}">`:`<div class="placeholder">No local card art yet for<br>${card.name}</div>`; const el=document.createElement('article'); el.className='card'; el.innerHTML=`<div class="card-pos">${card.position}</div><div class="card-media">${image}</div><div class="card-name">${card.name}</div><div class="meta">${card.orientation}</div><div class="small" style="margin-top:10px;">${card.meanings[card.orientation]}</div>`; root.appendChild(el); }); }
+function renderReadingChunks(text){ const root=document.getElementById('readingChunks'); if(!root) return; root.innerHTML=''; const parts=text.split(/
+\s*
+/).map(s=>s.trim()).filter(Boolean); const chunked = parts.length ? parts : [text]; chunked.forEach((part, i) => { const el=document.createElement('div'); el.className='box small'; el.innerHTML=`<div class="pill">Section ${i+1}</div><div style="margin-top:10px; white-space:pre-wrap;">${part}</div>`; root.appendChild(el); }); }
 function gather(){ return { name:document.getElementById('name').value.trim()||'Seeker', ageRange:document.getElementById('ageRange').value.trim(), relationshipStatus:document.getElementById('relationshipStatus').value, focusTheme:document.getElementById('focusTheme').value, readerStyle:document.getElementById('readerStyle').value, focus:document.getElementById('focus').value, question:document.getElementById('question').value.trim(), desiredAnswer:document.getElementById('desiredAnswer').value.trim(), fearedTruth:document.getElementById('fearedTruth').value.trim() }; }
 async function createReading(){ const payload=gather(); const status=document.getElementById('statusRitual'); if(!payload.question){ status.textContent='Ask a real question first.'; showPage(3); return; } if(weekLog().length>=MAX_WEEKLY){ status.textContent='You have reached the current weekly reading limit.'; return; } if(repeatedQuestion(payload.question)){ status.textContent='That question is too similar to one you already asked this week. Ask something materially different.'; showPage(3); return; }
   status.textContent='The reader is narrowing the question, diagnosing the real issue, drawing the cards, and composing the reading...';
@@ -131,6 +135,7 @@ async function createReading(){ const payload=gather(); const status=document.ge
     renderCards(data.cards);
     document.getElementById('readingMeta').textContent=`${data.spread_name} · ${data.reader_style.replaceAll('_',' ')}`;
     document.getElementById('readingText').textContent=data.reading;
+    renderReadingChunks(data.reading);
     document.getElementById('briefText').textContent=JSON.stringify(data.brief,null,2);
     showPage(5);
   }catch(err){ status.textContent=(err.message||'Request failed'); }

@@ -114,7 +114,7 @@ async function openaiChat(messages, { temperature = 0.8, response_format } = {})
     model: process.env.OPENAI_MODEL || 'gpt-4.1-mini',
     messages,
     temperature,
-    max_tokens: 1400
+    max_tokens: 750
   };
   if (response_format) payload.response_format = response_format;
   const res = await fetch('https://api.openai.com/v1/chat/completions', {
