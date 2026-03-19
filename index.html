@@ -47,41 +47,39 @@
     <div class="hero-cards">
       <img src="./card-images/the-moon.jpg" alt="The Moon"><img src="./card-images/the-star.jpg" alt="The Star"><img src="./card-images/the-sun.jpg" alt="The Sun">
     </div>
-    <div class="actions"><button class="primary" id="startBtn" onclick="showPage(1)">Begin the session</button><span class="version">public test</span></div>
+    <div class="actions"><button class="primary" onclick="goTo(1)">Begin the session</button><span class="version">public test</span></div>
   </section>
 
   <section class="panel hidden" id="page1">
     <h2>Temporary account</h2>
     <p class="sub">One reader. One identity. The app remembers enough to stop the session from becoming a toy.</p>
     <div class="grid two">
-      <div><label for="name">Name</label><input id="name" placeholder="Your name"></div>
-      <div><label for="ageRange">Age range (optional)</label><input id="ageRange" placeholder="20s, 30s, etc."></div>
-      <div><label for="relationshipStatus">Relationship status (optional)</label><select id="relationshipStatus"><option value="">Choose one</option><option>Single</option><option>Dating</option><option>In a relationship</option><option>Complicated</option><option>Prefer not to say</option></select></div>
-      <div><label for="focusTheme">Current life pressure (optional)</label><select id="focusTheme"><option value="">Choose one</option><option>Love</option><option>Career</option><option>Decision</option><option>Healing</option><option>General uncertainty</option></select></div>
+      <div><label>Name</label><input id="name" placeholder="Your name"></div>
+      <div><label>Age range (optional)</label><input id="ageRange" placeholder="20s, 30s, etc."></div>
+      <div><label>Relationship status (optional)</label><select id="relationshipStatus"><option value="">Choose one</option><option>Single</option><option>Dating</option><option>In a relationship</option><option>Complicated</option><option>Prefer not to say</option></select></div>
+      <div><label>Current life pressure (optional)</label><select id="focusTheme"><option value="">Choose one</option><option>Love</option><option>Career</option><option>Decision</option><option>Healing</option><option>General uncertainty</option></select></div>
     </div>
-    <div class="actions"><button class="secondary" data-back="0">Back</button><button class="primary" id="toCustomizeBtn" onclick="showPage(2)">Continue</button></div>
+    <div class="actions"><button class="secondary" onclick="goTo(0)">Back</button><button class="primary" onclick="goTo(2)">Continue</button></div>
   </section>
 
   <section class="panel hidden" id="page2">
     <h2>Choose your reader</h2>
     <p class="sub">Only a few visible choices. The rest stays behind the curtain.</p>
     <div class="grid two">
-      <div><label for="readerStyle">Reader style</label><select id="readerStyle"><option value="relationship_expert">Relationship Expert</option><option value="calm_logical_critic">Calm Logical Critic</option></select></div>
-      <div><label for="focus">Focus</label><select id="focus"><option value="general">General guidance</option><option value="love">Love / relationships</option><option value="career">Career / work / money</option><option value="emotional">Healing / inner life</option><option value="decision">Decision / crossroads</option></select></div>
+      <div><label>Reader style</label><select id="readerStyle"><option value="relationship_expert">Relationship Expert</option><option value="calm_logical_critic">Calm Logical Critic</option></select></div>
+      <div><label>Focus</label><select id="focus"><option value="general">General guidance</option><option value="love">Love / relationships</option><option value="career">Career / work / money</option><option value="emotional">Healing / inner life</option><option value="decision">Decision / crossroads</option></select></div>
     </div>
     <div class="box small warning" id="limitBox"></div>
-    <div class="actions"><button class="secondary" data-back="1">Back</button><button class="primary" id="toQuestionBtn" onclick="showPage(3)">Continue</button></div>
+    <div class="actions"><button class="secondary" onclick="goTo(1)">Back</button><button class="primary" onclick="goTo(3)">Continue</button></div>
   </section>
 
   <section class="panel hidden" id="page3">
     <h2>Ask clearly</h2>
     <p class="sub">The reader will only answer one real question at a time. Repeating the same question in substance is blocked.</p>
     <div class="grid">
-      <div><label for="question">Your question</label><textarea id="question" placeholder="How does she really see me, and what should I do next?"></textarea></div>
-      <div><label for="desiredAnswer">What are you hoping is true? (optional)</label><input id="desiredAnswer" placeholder="Optional"></div>
-      <div><label for="fearedTruth">What are you afraid is true? (optional)</label><input id="fearedTruth" placeholder="Optional"></div>
+      <div><label>Your question</label><textarea id="question" placeholder="How does she really see me, and what should I do next?"></textarea></div>
     </div>
-    <div class="actions"><button class="secondary" data-back="2">Back</button><button class="primary" id="toRitualBtn">Continue</button></div>
+    <div class="actions"><button class="secondary" onclick="goTo(2)">Back</button><button class="primary" onclick="goTo(4)">Continue</button></div>
     <div class="status" id="statusQuestion"></div>
   </section>
 
@@ -89,7 +87,7 @@
     <h2>Prepare for the draw</h2>
     <p class="sub">Read this once: do not test the reader, do not repeat the same question, and do not expect the cards to flatter you. If you proceed, the session counts.</p>
     <div class="box small">This public test allows <strong>3 readings per week per device/account</strong>. Similar questions are blocked. One serious session is better than five shallow retries.</div>
-    <div class="actions"><button class="secondary" data-back="3">Back</button><button class="primary" id="drawBtn">Draw the cards</button></div>
+    <div class="actions"><button class="secondary" onclick="goTo(3)">Back</button><button class="primary" onclick="drawReading()">Draw the cards</button></div>
     <div class="status" id="statusRitual"></div>
   </section>
 
@@ -100,55 +98,20 @@
     <div class="reading-box" id="readingText"></div>
     <div class="grid two" id="readingChunks" style="margin-top:16px;"></div>
     <details style="margin-top:16px;"><summary>Internal session brief</summary><div class="brief-box" id="briefText"></div></details>
-    <div class="actions"><button class="secondary" data-back="4">Back</button><button class="primary" id="newReadingBtn" onclick="showPage(3)">Start a new session</button></div>
+    <div class="actions"><button class="secondary" onclick="goTo(4)">Back</button><button class="primary" onclick="resetSession()">Start a new session</button></div>
   </section>
 </div>
 <script>
 const API_BASE='';
-const WEEK_MS = 7*24*60*60*1000;
-const MAX_WEEKLY = 3;
-const imageMap = {
-'Ace of Cups':'./card-images/ace-of-cups.jpg','Ace of Pentacles':'./card-images/ace-of-pentacles.jpg','Ace of Swords':'./card-images/ace-of-swords.jpg','Ace of Wands':'./card-images/ace-of-wands.jpg','Death':'./card-images/death.jpg','Eight of Cups':'./card-images/eight-of-cups.jpg','Eight of Pentacles':'./card-images/eight-of-pentacles.jpg','Eight of Swords':'./card-images/eight-of-swords.jpg','Eight of Wands':'./card-images/eight-of-wands.jpg','Five of Cups':'./card-images/five-of-cups.jpg','Five of Pentacles':'./card-images/five-of-pentacles.jpg','Five of Swords':'./card-images/five-of-swords.jpg','Five of Wands':'./card-images/five-of-wands.jpg','Four of Cups':'./card-images/four-of-cups.jpg','Four of Pentacles':'./card-images/four-of-pentacles.jpg','Four of Swords':'./card-images/four-of-swords.jpg','Four of Wands':'./card-images/four-of-wands.jpg','Judgement':'./card-images/judgement.jpg','Justice':'./card-images/justice.jpg','King of Cups':'./card-images/king-of-cups.jpg','King of Pentacles':'./card-images/king-of-pentacles.jpg','King of Swords':'./card-images/king-of-swords.jpg','King of Wands':'./card-images/king-of-wands.jpg','Knight of Cups':'./card-images/knight-of-cups.jpg','Knight of Pentacles':'./card-images/knight-of-pentacles.jpg','Knight of Swords':'./card-images/knight-of-swords.jpg','Knight of Wands':'./card-images/knight-of-wands.jpg','Nine of Cups':'./card-images/nine-of-cups.jpg','Nine of Pentacles':'./card-images/nine-of-pentacles.jpg','Nine of Swords':'./card-images/nine-of-swords.jpg','Page of Cups':'./card-images/page-of-cups.jpg','Page of Pentacles':'./card-images/page-of-pentacles.jpg','Page of Swords':'./card-images/page-of-swords.jpg','Page of Wands':'./card-images/page-of-wands.jpg','Queen of Cups':'./card-images/queen-of-cups.jpg','Queen of Pentacles':'./card-images/queen-of-pentacles.jpg','Queen of Swords':'./card-images/queen-of-swords.jpg','Queen of Wands':'./card-images/queen-of-wands.jpg','Seven of Cups':'./card-images/seven-of-cups.jpg','Seven of Pentacles':'./card-images/seven-of-pentacles.jpg','Seven of Swords':'./card-images/seven-of-swords.jpg','Seven of Wands':'./card-images/seven-of-wands.jpg','Six of Cups':'./card-images/six-of-cups.jpg','Six of Pentacles':'./card-images/six-of-pentacles.jpg','Six of Swords':'./card-images/six-of-swords.jpg','Six of Wands':'./card-images/six-of-wands.jpg','Strength':'./card-images/strength.jpg','Temperance':'./card-images/temperance.jpg','Ten of Cups':'./card-images/ten-of-cups.jpg','Ten of Pentacles':'./card-images/ten-of-pentacles.jpg','Ten of Swords':'./card-images/ten-of-swords.jpg','Ten of Wands':'./card-images/ten-of-wands.jpg','The Chariot':'./card-images/the-chariot.jpg','The Devil':'./card-images/the-devil.jpg','The Emperor':'./card-images/the-emperor.jpg','The Empress':'./card-images/the-empress.jpg','The Fool':'./card-images/the-fool.jpg','The Hanged Man':'./card-images/the-hanged-man.jpg','The Hermit':'./card-images/the-hermit.jpg','The Hierophant':'./card-images/the-hierophant.jpg','The High Priestess':'./card-images/the-high-priestess.jpg','The Lovers':'./card-images/the-lovers.jpg','The Magician':'./card-images/the-magician.jpg','The Moon':'./card-images/the-moon.jpg','The Star':'./card-images/the-star.jpg','The Sun':'./card-images/the-sun.jpg','The Tower':'./card-images/the-tower.jpg','The World':'./card-images/the-world.jpg','Three of Cups':'./card-images/three-of-cups.jpg','Three of Pentacles':'./card-images/three-of-pentacles.jpg','Three of Swords':'./card-images/three-of-swords.jpg','Three of Wands':'./card-images/three-of-wands.jpg','Two of Cups':'./card-images/two-of-cups.jpg','Two of Pentacles':'./card-images/two-of-pentacles.jpg','Two of Swords':'./card-images/two-of-swords.jpg','Two of Wands':'./card-images/two-of-wands.jpg','Wheel of Fortune':'./card-images/wheel-of-fortune.jpg'
-};
-let state={page:0};
-function anonId(){ let id=localStorage.getItem('tr_anon_id'); if(!id){ id='anon_'+Math.random().toString(36).slice(2)+Date.now().toString(36); localStorage.setItem('tr_anon_id',id);} return id; }
-function weekLog(){ const raw=localStorage.getItem('tr_sessions'); let arr=[]; try{ arr=JSON.parse(raw||'[]'); }catch{} const now=Date.now(); arr=arr.filter(x=>now-x.time<WEEK_MS); localStorage.setItem('tr_sessions',JSON.stringify(arr)); return arr; }
-function addSession(question){ const arr=weekLog(); arr.push({time:Date.now(), question}); localStorage.setItem('tr_sessions',JSON.stringify(arr)); }
-function normalizeQuestion(q){ return q.toLowerCase().replace(/[^a-z0-9\s]/g,' ').replace(/\s+/g,' ').trim(); }
-function similarity(a,b){ const A=new Set(normalizeQuestion(a).split(' ').filter(w=>w.length>2)); const B=new Set(normalizeQuestion(b).split(' ').filter(w=>w.length>2)); if(!A.size||!B.size) return 0; const inter=[...A].filter(x=>B.has(x)).length; const union=new Set([...A,...B]).size; return inter/union; }
-function repeatedQuestion(q){ return weekLog().some(x=>similarity(q,x.question)>=0.55); }
-function showPage(i){ state.page=i; for(let k=0;k<6;k++){ document.getElementById('page'+k).classList.toggle('hidden',k!==i); document.getElementById('dot'+k).classList.toggle('active',k===i);} updateLimitBox(); }
-window.showPage = showPage;
-function updateLimitBox(){ const used=weekLog().length; const left=Math.max(0,MAX_WEEKLY-used); const el=document.getElementById('limitBox'); if(el) el.textContent=`This temporary account currently has ${left} of ${MAX_WEEKLY} reading(s) left this week.`; }
-function renderCards(cards){ const root=document.getElementById('cards'); root.innerHTML=''; cards.forEach(card=>{ const image=imageMap[card.name]?`<img src="${imageMap[card.name]}" alt="${card.name}" class="${card.orientation==='reversed'?'reversed':''}">`:`<div class="placeholder">No local card art yet for<br>${card.name}</div>`; const el=document.createElement('article'); el.className='card'; el.innerHTML=`<div class="card-pos">${card.position}</div><div class="card-media">${image}</div><div class="card-name">${card.name}</div><div class="meta">${card.orientation}</div><div class="small" style="margin-top:10px;">${card.meanings[card.orientation]}</div>`; root.appendChild(el); }); }
-function renderReadingChunks(text){ const root=document.getElementById('readingChunks'); if(!root) return; root.innerHTML=''; const parts=text.split(/
-\s*
-/).map(s=>s.trim()).filter(Boolean); const chunked = parts.length ? parts : [text]; chunked.forEach((part, i) => { const el=document.createElement('div'); el.className='box small'; el.innerHTML=`<div class="pill">Section ${i+1}</div><div style="margin-top:10px; white-space:pre-wrap;">${part}</div>`; root.appendChild(el); }); }
-function gather(){ return { name:document.getElementById('name').value.trim()||'Seeker', ageRange:document.getElementById('ageRange').value.trim(), relationshipStatus:document.getElementById('relationshipStatus').value, focusTheme:document.getElementById('focusTheme').value, readerStyle:document.getElementById('readerStyle').value, focus:document.getElementById('focus').value, question:document.getElementById('question').value.trim(), desiredAnswer:document.getElementById('desiredAnswer').value.trim(), fearedTruth:document.getElementById('fearedTruth').value.trim() }; }
-async function createReading(){ const payload=gather(); const status=document.getElementById('statusRitual'); if(!payload.question){ status.textContent='Ask a real question first.'; showPage(3); return; } if(weekLog().length>=MAX_WEEKLY){ status.textContent='You have reached the current weekly reading limit.'; return; } if(repeatedQuestion(payload.question)){ status.textContent='That question is too similar to one you already asked this week. Ask something materially different.'; showPage(3); return; }
-  status.textContent='The reader is narrowing the question, diagnosing the real issue, drawing the cards, and composing the reading...';
-  document.getElementById('drawBtn').disabled=true;
-  try{
-    const res=await fetch(`${API_BASE}/api/reading`, {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({ ...payload, anonId:anonId(), spreadKey: payload.focus==='love' ? 'relationship' : payload.focus==='decision' ? 'crossroads' : 'three' })});
-    const data=await res.json();
-    if(!data.ok) throw new Error(data.error||'Reading failed');
-    addSession(payload.question);
-    renderCards(data.cards);
-    document.getElementById('readingMeta').textContent=`${data.spread_name} · ${data.reader_style.replaceAll('_',' ')}`;
-    document.getElementById('readingText').textContent=data.reading;
-    renderReadingChunks(data.reading);
-    document.getElementById('briefText').textContent=JSON.stringify(data.brief,null,2);
-    showPage(5);
-  }catch(err){ status.textContent=(err.message||'Request failed'); }
-  finally{ document.getElementById('drawBtn').disabled=false; }
-}
-document.getElementById('startBtn').addEventListener('click',()=>showPage(1));
-document.getElementById('toCustomizeBtn').addEventListener('click',()=>showPage(2));
-document.getElementById('toQuestionBtn').addEventListener('click',()=>showPage(3));
-document.getElementById('toRitualBtn').addEventListener('click',()=>{ const q=document.getElementById('question').value.trim(); const status=document.getElementById('statusQuestion'); if(!q){ status.textContent='Ask a real question first.'; return; } if(repeatedQuestion(q)){ status.textContent='That question is too similar to one you already asked this week.'; return; } showPage(4); });
-document.getElementById('drawBtn').addEventListener('click',createReading);
-document.getElementById('newReadingBtn').addEventListener('click',()=>{ document.getElementById('question').value=''; document.getElementById('desiredAnswer').value=''; document.getElementById('fearedTruth').value=''; showPage(3); });
-document.querySelectorAll('[data-back]').forEach(el=>el.addEventListener('click',()=>showPage(Number(el.dataset.back))));
-showPage(0);
-</script>
-</body></html>
+const WEEK_MS=7*24*60*60*1000;
+const MAX_WEEKLY=3;
+const imageMap={'Ace of Cups':'./card-images/ace-of-cups.jpg','Ace of Pentacles':'./card-images/ace-of-pentacles.jpg','Ace of Swords':'./card-images/ace-of-swords.jpg','Ace of Wands':'./card-images/ace-of-wands.jpg','Death':'./card-images/death.jpg','Eight of Cups':'./card-images/eight-of-cups.jpg','Eight of Pentacles':'./card-images/eight-of-pentacles.jpg','Eight of Swords':'./card-images/eight-of-swords.jpg','Eight of Wands':'./card-images/eight-of-wands.jpg','Five of Cups':'./card-images/five-of-cups.jpg','Five of Pentacles':'./card-images/five-of-pentacles.jpg','Five of Swords':'./card-images/five-of-swords.jpg','Five of Wands':'./card-images/five-of-wands.jpg','Four of Cups':'./card-images/four-of-cups.jpg','Four of Pentacles':'./card-images/four-of-pentacles.jpg','Four of Swords':'./card-images/four-of-swords.jpg','Four of Wands':'./card-images/four-of-wands.jpg','Judgement':'./card-images/judgement.jpg','Justice':'./card-images/justice.jpg','King of Cups':'./card-images/king-of-cups.jpg','King of Pentacles':'./card-images/king-of-pentacles.jpg','King of Swords':'./card-images/king-of-swords.jpg','King of Wands':'./card-images/king-of-wands.jpg','Knight of Cups':'./card-images/knight-of-cups.jpg','Knight of Pentacles':'./card-images/knight-of-pentacles.jpg','Knight of Swords':'./card-images/knight-of-swords.jpg','Knight of Wands':'./card-images/knight-of-wands.jpg','Nine of Cups':'./card-images/nine-of-cups.jpg','Nine of Pentacles':'./card-images/nine-of-pentacles.jpg','Nine of Swords':'./card-images/nine-of-swords.jpg','Page of Cups':'./card-images/page-of-cups.jpg','Page of Pentacles':'./card-images/page-of-pentacles.jpg','Page of Swords':'./card-images/page-of-swords.jpg','Page of Wands':'./card-images/page-of-wands.jpg','Queen of Cups':'./card-images/queen-of-cups.jpg','Queen of Pentacles':'./card-images/queen-of-pentacles.jpg','Queen of Swords':'./card-images/queen-of-swords.jpg','Queen of Wands':'./card-images/queen-of-wands.jpg','Seven of Cups':'./card-images/seven-of-cups.jpg','Seven of Pentacles':'./card-images/seven-of-pentacles.jpg','Seven of Swords':'./card-images/seven-of-swords.jpg','Seven of Wands':'./card-images/seven-of-wands.jpg','Six of Cups':'./card-images/six-of-cups.jpg','Six of Pentacles':'./card-images/six-of-pentacles.jpg','Six of Swords':'./card-images/six-of-swords.jpg','Six of Wands':'./card-images/six-of-wands.jpg','Strength':'./card-images/strength.jpg','Temperance':'./card-images/temperance.jpg','Ten of Cups':'./card-images/ten-of-cups.jpg','Ten of Pentacles':'./card-images/ten-of-pentacles.jpg','Ten of Swords':'./card-images/ten-of-swords.jpg','Ten of Wands':'./card-images/ten-of-wands.jpg','The Chariot':'./card-images/the-chariot.jpg','The Devil':'./card-images/the-devil.jpg','The Emperor':'./card-images/the-emperor.jpg','The Empress':'./card-images/the-empress.jpg','The Fool':'./card-images/the-fool.jpg','The Hanged Man':'./card-images/the-hanged-man.jpg','The Hermit':'./card-images/the-hermit.jpg','The Hierophant':'./card-images/the-hierophant.jpg','The High Priestess':'./card-images/the-high-priestess.jpg','The Lovers':'./card-images/the-lovers.jpg','The Magician':'./card-images/the-magician.jpg','The Moon':'./card-images/the-moon.jpg','The Star':'./card-images/the-star.jpg','The Sun':'./card-images/the-sun.jpg','The Tower':'./card-images/the-tower.jpg','The World':'./card-images/the-world.jpg','Three of Cups':'./card-images/three-of-cups.jpg','Three of Pentacles':'./card-images/three-of-pentacles.jpg','Three of Swords':'./card-images/three-of-swords.jpg','Three of Wands':'./card-images/three-of-wands.jpg','Two of Cups':'./card-images/two-of-cups.jpg','Two of Pentacles':'./card-images/two-of-pentacles.jpg','Two of Swords':'./card-images/two-of-swords.jpg','Two of Wands':'./card-images/two-of-wands.jpg','Wheel of Fortune':'./card-images/wheel-of-fortune.jpg'};
+function weekLog(){const raw=localStorage.getItem('tr_sessions');let arr=[];try{arr=JSON.parse(raw||'[]')}catch{}const now=Date.now();arr=arr.filter(x=>now-x.time<WEEK_MS);localStorage.setItem('tr_sessions',JSON.stringify(arr));return arr}
+function addSession(question){const arr=weekLog();arr.push({time:Date.now(),question});localStorage.setItem('tr_sessions',JSON.stringify(arr))}
+function normalizeQuestion(q){return q.toLowerCase().replace(/[^a-z0-9\\s]/g,' ').replace(/\\s+/g,' ').trim()}
+function similarity(a,b){const A=new Set(normalizeQuestion(a).split(' ').filter(w=>w.length>2));const B=new Set(normalizeQuestion(b).split(' ').filter(w=>w.length>2));if(!A.size||!B.size)return 0;const inter=[...A].filter(x=>B.has(x)).length;const union=new Set([...A,...B]).size;return inter/union}
+function repeatedQuestion(q){return weekLog().some(x=>similarity(q,x.question)>=0.55)}
+function goTo(i){for(let k=0;k<6;k++){const p=document.getElementById('page'+k);const d=document.getElementById('dot'+k);if(p)p.classList.toggle('hidden',k!==i);if(d)d.classList.toggle('active',k===i)}const lb=document.getElementById('limitBox');if(lb){const used=weekLog().length;const left=Math.max(0,MAX_WEEKLY-used);lb.textContent='This temporary account currently has '+left+' of '+MAX_WEEKLY+' reading(s) left this week.'}}
+function renderCards(cards){const root=document.getElementById('cards');if(!root)return;root.innerHTML='';cards.forEach(card=>{const image=imageMap[card.name]?'<img src="'+imageMap[card.name]+'" alt="'+card.name+'" class="'+(card.orientation==='reversed'?'reversed':'')+'">':'<div class="placeholder">No local card art yet for<br>'+card.name+'</div>';const el=document.createElement('article');el.className='card';el.innerHTML='<div class="card-pos">'+card.position+'</div><div class="card-media">'+image+'</div><div class="card-name">'+card.name+'</div><div class="meta">'+card.orientation+'</div><div class="small" style="margin-top:10px;">'+card.meanings[card.orientation]+'</div>';root.appendChild(el)})}
+function renderReadingChunks(text){const root=document.getElementById('readingChunks');if(!root)return;root.innerHTML='';const parts=text.split(/\\n\\s*\\n/).map(s=>s.trim()).filter(Boolean);const chunked=parts.length?parts:[text];chunked.forEach((part,i)=>{const el=document.createElement('div');el.className='box small';el.innerHTML='<div class="pill">Section '+(i+1)+'</div><div style="margin-top:10px; white-space:pre-wrap;">'+part+'</div>';root.appendChild(el)})}
+function gather(){return{name:(document.getElementById('name')?.value||'').trim()||'Seeker
